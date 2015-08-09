@@ -23,6 +23,7 @@ def guessing(attempt):       #function to allocate guesses and evaluate answers
 	except:
 		print ('Needs to be an integer.')		#if it can't be converted, scold them
 		guessing(attempt)						#and try again
+		return
 	if int_user_guess == answer:
 		print ("That's correct!")				#when user guesses the correct number, applaud them
 	elif (int_user_guess < 1):					#scold them if it's not in range, try again

@@ -22,17 +22,32 @@
 ################################################################################
 # Imports
 
+import math
 
 # Body
 
+# eval_loop iteratively prompts the user, takes the
+# resulting input and evaluates it, and prints the result.
 
-
+def eval_loop():
+	value = 'None'
+	while True:
+		line = raw_input('> ')
+		if line == 'done':
+			return value
+		else:
+			try:
+				value = eval(line)
+				print value
+			except:
+				print ('Needs to be something Python can evaluate.')
+				
 
 ################################################################################
 def main():
-    pass # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
     
+	eval_loop()
+
 
 if __name__ == '__main__':
     main()
