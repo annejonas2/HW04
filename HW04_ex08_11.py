@@ -12,9 +12,9 @@
 ################################################################################
 # Body
 
+
 def any_lowercase1(s):
-    """Explain what is wrong, if anything, here.
-    """
+    """This function only looks at the first character in s.[[why??]]"""
     for c in s:
         if c.islower():
             return True
@@ -22,8 +22,9 @@ def any_lowercase1(s):
             return False
 
 def any_lowercase2(s):
-    """Explain what is wrong, if anything, here.
-    """
+    """The string of 'c' is different than the character c - the former is 
+    by definition lowercase, making the function always return True."""
+    
     for c in s:
         if 'c'.islower():
             return 'True'
@@ -31,14 +32,15 @@ def any_lowercase2(s):
             return 'False'
 
 def any_lowercase3(s):
-    """Explain what is wrong, if anything, here.
+    """Returns the answer only for the last letter in the string, 
+    instead of any letter.
     """
     for c in s:
         flag = c.islower()
     return flag
 
 def any_lowercase4(s):
-    """Explain what is wrong, if anything, here.
+    """nothing??
     """
     flag = False
     for c in s:
@@ -46,7 +48,7 @@ def any_lowercase4(s):
     return flag
 
 def any_lowercase5(s):
-    """Explain what is wrong, if anything, here.
+    """only works if all lowercase, because if it hits an uppercase it returns False
     """
     for c in s:
         if not c.islower():
@@ -60,8 +62,12 @@ def main():
     # call that function with a string for which the function returns
     # incorrectly.
     # ex.: any_lowercase_("thisstringmessesupthefunction")
-    print("Hello World!")
-    
+
+    print any_lowercase1('StRING')
+    print any_lowercase2('STRING')
+    print any_lowercase3('ccE')
+    print any_lowercase4('cannot figure this one out')
+    print any_lowercase5('stArs')
 
 if __name__ == '__main__':
     main()
